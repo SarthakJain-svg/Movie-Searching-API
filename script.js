@@ -1,5 +1,6 @@
 var k = 1;
 var arr = [];
+var id = "";
 
 window.onload= function (){
 	document.getElementById("inputBox").addEventListener("keyup", function (event) { 
@@ -10,6 +11,20 @@ window.onload= function (){
 	});
 }
 
+var text = '{"TVShowsData":[' +
+'{"Name":"Under the Dome","Id":"1" },' +
+'{"Name":"Person of Interest","Id":"2" },' +
+'{"Name":"Bitten","Id":"3" },' +
+'{"Name":"Arrow","Id":"4" },' +
+'{"Name":"True Detective","Id":"5" },' +
+'{"Name":"The 100","Id":"6" },' +
+'{"Name":"Homeland","Id":"7" },' +
+'{"Name":"Glee","Id":"8" },' +
+'{"Name":"Revenge","Id":"9" },' +
+'{"Name":"Grimm","Id":"10" }]}';
+
+var obj = JSON.parse(text);
+
 function loadDoc() 
 {
 	var input = document.getElementById("inputBox").value;
@@ -19,7 +34,15 @@ function loadDoc()
 		document.body.style.backgroundColor = "#AAAAAA";
 	}
 	document.getElementById("inputBox").value = "";
-	var id = localStorage.getItem(input);
+	
+	for(var i = 0; i < 10; i++)
+	{
+		if(obj.TVShowsData[i].Name == input)
+		{
+			id = obj.TVShowsData[i].Id;
+		}
+	}
+
 	var xhttp = new XMLHttpRequest();
 	var img = document.createElement('img');
 	var h2 = document.createElement("h2");
