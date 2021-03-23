@@ -1,3 +1,4 @@
+// avoid using global variables
 var k = 1;
 var arr = [];
 var id = "";
@@ -11,6 +12,7 @@ window.onload= function (){
 	});
 }
 
+// why created JSON string, use object directly
 var text = '{"TVShowsData":[' +
 '{"Name":"Under the Dome","Id":"1" },' +
 '{"Name":"Person of Interest","Id":"2" },' +
@@ -23,11 +25,14 @@ var text = '{"TVShowsData":[' +
 '{"Name":"Revenge","Id":"9" },' +
 '{"Name":"Grimm","Id":"10" }]}';
 
+// no need to parse here, instead create JSON object directly
 var obj = JSON.parse(text);
 
 function loadDoc() 
 {
 	var input = document.getElementById("inputBox").value;
+	
+	// try to use === instead of ==
 	if(input != "" && k==1)
 	{
 		document.getElementById("heading1").style.visibility = "visible";
@@ -37,6 +42,11 @@ function loadDoc()
 	
 	for(var i = 0; i < 10; i++)
 	{
+		// restructure your obj in more simple structure, example
+		/*var obj = {
+			"Under the Dome": 1,
+			"Arrow": 4
+		}*/
 		if(obj.TVShowsData[i].Name == input)
 		{
 			id = obj.TVShowsData[i].Id;
