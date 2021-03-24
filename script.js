@@ -52,7 +52,7 @@ function addDivision(image_path, movie_title, movie_brief)
 	}
 	else
 	{
-		img.src = "E:\\JS Practise\\API Integration\\Default.png"
+		img.src = "Default.png"
 	}
 	img.style.height = "250px";
 	img.style.width = "200px";
