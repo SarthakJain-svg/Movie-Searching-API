@@ -14,7 +14,7 @@
 
 #searchButton
 {
-	width: 9%;
+	width: 12%;
 	height: 7%;
 	margin-left: -6px;
 	background: #2196F3;
@@ -36,27 +36,420 @@
 	visibility: hidden;
 }
 
-#inner_div
+#sort_movie
 {
-	margin-left: 10%;
+	float: right;
+	margin-top: -52px;
+	margin-left : 2%;
+	border: none;
+	outline: none;
+	visibility: hidden;
+	font-size: 90%;
 }
 
 #inner_div div
 {
 	border: 1px solid black;
 	margin-top: 5%;
-	text-align: center;
-	width: 90%;
+	margin-left: 2.4%;
+	width: 30%;
 	background-color: #FFFAF0;
+	height: 60%;
+	float: left;
+}
+
+@media only screen and (max-width: 1057px)
+{
+	#inner_div div
+	{
+		height: 65%;
+	}
+
+	#inner_div div img
+	{
+		margin-top: 1em;
+	}
+}
+
+#inner_div div h2
+{
+	text-align: center;
+}
+
+#inner_div div h2 a
+{
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+#inner_div div h2 a:hover
+{
+	color: grey;
 }
 
 #inner_div div img
 {
-	margin-top: 5%;
+	margin-left: auto;
+    display: block;
+	margin-right: auto;
+	height: 250px;
+	width: 200px;
 }
 
 #inner_div div p
 {
 	text-align:left;
 	margin-left: 5%;
+	width: 20%;
+}
+  
+#modalBox 
+{
+	background-color: #fefefe;
+	visibility: hidden;
+	width: 60%;
+	height: 70%;
+	margin: -11.5em 19% 4%;
+	border: 1px solid #888;
+	z-index: 1;
+	position: fixed;
+}
+
+#close
+{
+	color: black;
+	visibility: hidden;
+	float: right;
+	margin-top: 1%;
+	margin-right: 2%;
+	font-size: 28px;
+	font-weight: bold;
+	z-index: 1;
+}
+  
+#close:hover, #close:focus
+{
+	color: red;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#modalBox h2
+{
+	text-align: center;
+}
+
+#modalBox img
+{
+	height: 330px;
+	width: 230px;
+	margin-left: 3%;
+}
+
+#modalBox p
+{
+	margin-top: -20.6em;
+	margin-left: 17em;
+	margin-right: 2%;
+}
+
+@media only screen and (max-width: 1324px)
+{
+	#modalBox
+	{
+		margin-top: -11.2em;
+	}
+}
+
+@media only screen and (max-width: 1275px)
+{
+	#modalBox
+	{
+		margin-top: -11em;
+	}
+}
+
+@media only screen and (max-width: 1224px)
+{
+	#modalBox
+	{
+		margin-top: -10.5em;
+	}
+}
+
+@media only screen and (max-width: 1175px)
+{
+	#modalBox
+	{
+		margin-top: -10em;
+	}
+}
+
+@media only screen and (max-width: 1124px)
+{
+	#modalBox
+	{
+		margin-top: -9.5em;
+	}
+}
+
+@media only screen and (max-width: 1075px)
+{
+	#modalBox
+	{
+		margin-top: -9em;
+	}
+}
+
+@media only screen and (max-width: 897px)
+{
+	#modalBox
+	{
+		height: 75%;
+		width: 70%;
+		margin-left: 14%;
+		margin-top: -9em;
+	}
+
+	#modalBox img
+	{
+		height: 360px;
+	}
+
+	#modalBox p
+	{
+		margin-top: -22.4em;
+	}
+}
+
+@media only screen and (max-width: 837px)
+{
+	#inner_div div
+	{
+		clear: left;
+		margin-left: 7.5em;
+		width: 70%;
+	}
+
+	#inner_div div img
+	{
+		width: 250px;
+	}
+}
+
+@media only screen and (max-width: 814px)
+{
+	#modalBox
+	{
+		margin-top: -8em;
+	}
+
+	#inner_div div
+	{
+		margin-left: 7em;
+	}
+}
+
+@media only screen and (max-width: 774px)
+{
+	#inner_div div
+	{
+		margin-left: 6.5em;
+	}
+}
+
+@media only screen and (max-width: 707px)
+{
+	#inner_div div
+	{
+		margin-left: 6em;
+	}
+
+	#sort_movie
+	{
+		margin-top: 18px;
+	}
+}
+
+@media only screen and (max-width: 655px)
+{
+	#inner_div div
+	{
+		margin-left: 5.5em;
+	}
+}
+
+@media only screen and (max-width: 606px)
+{
+	#inner_div div
+	{
+		margin-left: 5em;
+	}
+}
+
+@media only screen and (max-width: 554px)
+{
+	#inner_div div
+	{
+		margin-left: 4.5em;
+	}
+}
+
+#m_popularity_title, #m_releaseDate_title
+{
+	font-weight: 600;
+	font-size: 1.3em;
+	margin-left: 13em;
+}
+
+#m_popularity, #m_releaseDate
+{
+	margin-left: 17em;
+	position: absolute;
+}
+
+@media only screen and (max-width: 683px)
+{
+	#modalBox
+	{
+		height: 75%;
+		width: 75%;
+		margin-left: 11%;
+		margin-top: -8em;
+	}
+
+	#modalBox img
+	{
+		height: 350px;
+		width: 210px;
+	}
+
+	#modalBox p
+	{
+		margin-top: -24.4em;
+		margin-left: 17em;
+		font-size: 0.9em;
+	}
+
+	#m_popularity_title, #m_releaseDate_title
+	{
+		font-weight: 600;
+		font-size: 1em;
+		margin-left: 15.2em;
+	}
+
+	#m_popularity, #m_releaseDate
+	{
+		margin-left: 17em;
+		position: absolute;
+		font-size: 0.9em;
+	}
+}
+
+@media only screen and (max-width: 564px)
+{
+	#modalBox
+	{
+		height: 70%;
+		width: 70%;
+		margin-left: 14%;
+		margin-top: -8em;
+	}
+
+	#modalBox img
+	{
+		height: 150px;
+		width: 150px;
+		margin-left: 7.5em;
+	}
+
+	#modalBox p
+	{
+		margin-top: 1em;
+		margin-left: 1em;
+		font-size: 0.85em;
+	}
+
+	#m_popularity_title, #m_releaseDate_title
+	{
+		font-weight: 600;
+		font-size: 1em;
+	}
+
+	#m_popularity_title
+	{
+		margin-left: 4em;
+	}
+
+	#m_releaseDate_title
+	{
+		margin-top: -4.5em;
+		margin-left: 14em;
+	}
+
+	#m_popularity, #m_releaseDate
+	{
+		position: absolute;
+		font-size: 0.9em;
+	}
+
+	#m_popularity
+	{
+		margin-left: 5.5em;
+	}
+
+	#m_releaseDate
+	{
+		margin-left: 16.2em;
+	}
+}
+
+@media only screen and (max-width: 564px)
+{
+	#modalBox
+	{
+		margin-top: -6em;
+	}
+
+	#modalBox img
+	{
+		margin-left: 6.8em;
+	}
+
+	#m_popularity_title
+	{
+		margin-left: 3em;
+	}
+
+	#m_popularity
+	{
+		margin-left: 4.5em;
+	}
+}
+
+@media only screen and (max-width: 543px)
+{
+	#modalBox img
+	{
+		margin-left: 6.3em;
+	}
+}
+
+@media only screen and (max-width: 514px)
+{
+	#modalBox img
+	{
+		margin-left: 5.8em;
+	}
+
+	#m_popularity_title
+	{
+		margin-left: 2em;
+	}
+
+	#m_popularity
+	{
+		margin-left: 3.3em;
+	}
 }

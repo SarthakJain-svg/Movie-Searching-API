@@ -9,7 +9,25 @@
 		<button id="searchButton" onclick="loadDoc()">Search</button>
 		<br><br>
 		<h1 id="heading1">Movies Lists</h1>
+		<select id="sort_movie" onchange="SortMovie(this.value)">
+			<option disabled selected hidden>Sort By</option>
+			<option value="1">Movie Title (A - Z)</option>
+			<option value="2">Movie Title (Z - A)</option>
+			<option value="3">Release Date (Ascending)</option>
+			<option value="4">Release Date (Descending)</option>
+		</select>
 		<div id="inner_div"></div>
+	</div>
+	
+	<div id="modalBox">
+		<span id="close" onclick="closeClick()">&times;</span>
+		<h2 id="m_title"></h2>
+		<img id="m_image">
+		<p id="m_overview"></p>
+		<span id="m_popularity_title">Popularity</span><br>
+		<span id = "m_popularity"></span><br><br>
+		<span id="m_releaseDate_title">Release Date</span><br>
+		<span id="m_releaseDate"></span>
 	</div>
 </body>
 </html>
